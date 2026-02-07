@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lk.kiki.pos.shoppos.ui.ReportsController"
+      spacing="12">
+
+    <Label text="Reports Dashboard"
+           style="-fx-font-size:18px; -fx-font-weight:bold;"/>
+
+    <!-- Daily -->
+    <TitledPane text="Daily Report" expanded="true">
+        <VBox spacing="10" >
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Date:"/>
+                <DatePicker fx:id="dpDate"/>
+                <Button text="Load Daily" onAction="#onLoadDaily"/>
+            </HBox>
+
+            <GridPane hgap="15" vgap="8">
+                <Label text="Daily Sales:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label fx:id="lblDailySales" text="0.00" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Daily Purchases:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label fx:id="lblDailyPurchases" text="0.00" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Daily Loss (Damaged/Expired):" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Label fx:id="lblDailyLoss" text="0.00" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+    </TitledPane>
+
+    <!-- Monthly -->
+    <TitledPane text="Monthly Report" expanded="true">
+        <VBox spacing="10" >
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Year:"/>
+                <ComboBox fx:id="cmbYear" prefWidth="100"/>
+                <Label text="Month:"/>
+                <ComboBox fx:id="cmbMonth" prefWidth="140"/>
+                <Button text="Load Monthly" onAction="#onLoadMonthly"/>
+            </HBox>
+
+            <GridPane hgap="15" vgap="8">
+                <Label text="Monthly Sales:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label fx:id="lblMonthlySales" text="0.00" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Monthly Purchases:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label fx:id="lblMonthlyPurchases" text="0.00" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Monthly Revenue:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Label fx:id="lblRevenue" text="0.00" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Monthly COGS:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <Label fx:id="lblCogs" text="0.00" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Monthly Profit:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                <Label fx:id="lblProfit" text="0.00" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                <Label text="Monthly Loss Value:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                <Label fx:id="lblMonthlyLoss" text="0.00" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+    </TitledPane>
+
+    <!-- Stock -->
+    <TitledPane text="Stock Summary" expanded="true">
+        <VBox spacing="10" >
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <HBox spacing="30">
+                <VBox spacing="5">
+                    <Label text="Total Stock Units:"/>
+                    <Label fx:id="lblStockUnits" text="0"/>
+                </VBox>
+                <VBox spacing="5">
+                    <Label text="Stock Value @ Cost:"/>
+                    <Label fx:id="lblStockValue" text="0.00"/>
+                </VBox>
+                <Button text="Refresh Stock" onAction="#onRefreshStock"/>
+            </HBox>
+        </VBox>
+    </TitledPane>
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</VBox>

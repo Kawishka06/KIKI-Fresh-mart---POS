@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="lk.kiki.pos.shoppos.ui.MainController"
+            stylesheets="@app.css">
+
+    <!-- TOP BAR -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" styleClass="topbar">
+            <Button text="☰" onAction="#toggleMenu" styleClass="hamburger"/>
+            <Label text="KIKI FRESH MART" styleClass="appTitle"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Label fx:id="lblUserInfo" text="" styleClass="userInfo"/>
+        </HBox>
+    </top>
+
+    <!-- LEFT MENU (collapsible) -->
+    <!-- LEFT MENU (collapsible) -->
+    <left>
+        <VBox fx:id="sideMenu" spacing="10" styleClass="sidebar" prefWidth="200">
+
+            <Button fx:id="btnProducts"
+                    text="Products"
+                    onAction="#openProducts"
+                    maxWidth="Infinity"
+                    styleClass="menuBtn"/>
+
+            <Button fx:id="btnSales"
+                    text="Sales"
+                    onAction="#openSales"
+                    maxWidth="Infinity"
+                    styleClass="menuBtn"/>
+
+            <Button fx:id="btnPurchases"
+                    text="Purchases"
+                    onAction="#openPurchases"
+                    maxWidth="Infinity"
+                    styleClass="menuBtn"/>
+
+            <Button fx:id="btnReports"
+                    text="Reports"
+                    onAction="#openReports"
+                    maxWidth="Infinity"
+                    styleClass="menuBtn"/>
+
+            <Button fx:id="btnLowStock"
+                    text="Low Stock (0)"
+                    onAction="#openLowStock"
+                    maxWidth="Infinity"
+                    styleClass="menuBtn"/>
+
+
+            <Separator/>
+
+            <Button fx:id="btnLogout"
+                    text="Logout"
+                    onAction="#onLogout"
+                    maxWidth="Infinity"
+                    styleClass="menuBtn"/>
+
+            <Button text="Exit"
+                    onAction="#onExit"
+                    maxWidth="Infinity"
+                    styleClass="menuBtnDanger"/>
+
+        </VBox>
+    </left>
+
+
+    <!-- CONTENT -->
+    <center>
+        <StackPane fx:id="contentPane"/>
+    </center>
+
+    <padding>
+        <Insets top="0" right="0" bottom="0" left="0"/>
+    </padding>
+</BorderPane>

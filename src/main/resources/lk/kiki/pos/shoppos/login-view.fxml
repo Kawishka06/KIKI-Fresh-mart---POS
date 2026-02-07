@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="lk.kiki.pos.shoppos.ui.LoginController"
+      spacing="12" alignment="CENTER"
+      styleClass="loginRoot">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="KIKI FRESH MART" styleClass="loginTitle"/>
+    <Label text="Login" styleClass="loginSub"/>
+
+    <TextField fx:id="txtUsername" promptText="Username" maxWidth="260"/>
+
+    <VBox spacing="6" maxWidth="260">
+        <!-- Hidden password -->
+        <PasswordField fx:id="txtPassword" promptText="Password"/>
+
+        <!-- Visible password (hidden by default) -->
+        <TextField fx:id="txtPasswordVisible" promptText="Password" visible="false" managed="false"/>
+
+        <CheckBox fx:id="chkShowPassword" text="Show password" onAction="#onToggleShowPassword"/>
+    </VBox>
+
+    <Button text="Login" onAction="#onLogin" styleClass="primaryBtn"/>
+
+    <Label fx:id="lblError" text="" styleClass="loginError"/>
+</VBox>

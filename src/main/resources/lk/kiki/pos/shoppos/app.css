@@ -1,0 +1,204 @@
+/* =======================
+   TOP BAR
+   ======================= */
+
+.topbar {
+    -fx-padding: 12 16 12 16;
+    -fx-spacing: 12;
+    -fx-background-color: #0f172a;
+}
+
+.hamburger {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+
+    -fx-min-width: 42px;
+    -fx-min-height: 38px;
+    -fx-background-radius: 8;
+}
+
+.hamburger:hover {
+    -fx-background-color: rgba(255,255,255,0.12);
+}
+
+.appTitle {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+
+/* =======================
+   SIDEBAR MENU
+   ======================= */
+
+.sidebar {
+    -fx-padding: 18 12 18 12;  /* more breathing room */
+    -fx-spacing: 12;           /* space between buttons */
+    -fx-background-color: #111827;
+}
+
+/* Normal menu buttons */
+.menuBtn {
+    -fx-background-color: #1f2937;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+
+    -fx-pref-height: 44px;     /* bigger click area */
+    -fx-background-radius: 8;
+    -fx-alignment: CENTER;
+}
+
+.menuBtn:hover {
+    -fx-background-color: #374151;
+}
+
+.menuBtn:pressed {
+    -fx-background-color: #4b5563;
+}
+
+/* Exit button */
+.menuBtnDanger {
+    -fx-background-color: #7f1d1d;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+
+    -fx-pref-height: 44px;
+    -fx-background-radius: 8;
+}
+
+.menuBtnDanger:hover {
+    -fx-background-color: #991b1b;
+}
+
+.menuBtnDanger:pressed {
+    -fx-background-color: #b91c1c;
+}
+
+
+/* =======================
+   COMMON ACTION BUTTONS (Search / Refresh / Add / Stock In...)
+   ======================= */
+
+.button {
+    -fx-background-radius: 6;
+}
+
+/* Give action buttons more padding/height */
+.actionBtn {
+    -fx-pref-height: 34px;
+    -fx-padding: 0 14 0 14;
+    -fx-font-size: 13px;
+}
+
+/* Search field styling */
+.searchField {
+    -fx-pref-height: 34px;
+    -fx-font-size: 13px;
+    -fx-padding: 0 10 0 10;
+}
+
+/* =======================
+   PURCHASE / SALES ACTION BUTTONS
+   ======================= */
+
+/* Primary action (Save / Checkout) */
+.primaryBtn {
+    -fx-background-color: #2563eb;   /* blue */
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+
+    -fx-pref-width: 140px;
+    -fx-pref-height: 36px;
+    -fx-background-radius: 8;
+}
+
+.primaryBtn:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.primaryBtn:pressed {
+    -fx-background-color: #1e40af;
+}
+
+/* Danger action (Remove / Delete) */
+.dangerBtn {
+    -fx-background-color: #b91c1c;   /* red */
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+
+    -fx-pref-width: 140px;
+    -fx-pref-height: 36px;
+    -fx-background-radius: 8;
+}
+
+.dangerBtn:hover {
+    -fx-background-color: #991b1b;
+}
+
+.dangerBtn:pressed {
+    -fx-background-color: #7f1d1d;
+}
+
+/* Search button (neutral action) */
+.searchBtn {
+    -fx-background-color: #334155;  /* slate */
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+
+    -fx-pref-height: 32px;
+    -fx-background-radius: 6;
+}
+
+.searchBtn:hover {
+    -fx-background-color: #475569;
+}
+
+.searchBtn:pressed {
+    -fx-background-color: #1e293b;
+}
+
+.loginRoot {
+    -fx-background-color: #0b1220;
+}
+
+.loginTitle {
+    -fx-text-fill: white;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.loginSub {
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 14px;
+}
+
+.loginError {
+    -fx-text-fill: #f87171;
+    -fx-font-size: 12px;
+}
+
+.userInfo {
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 12px;
+}
+
+.lowStockBtn {
+    -fx-background-color: #7c2d12; /* orange-brown */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.lowStockBtn:hover {
+    -fx-background-color: #9a3412;
+}
+
